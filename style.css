@@ -1,0 +1,219 @@
+/****************************** MISE EN PLACE DU STYLE GENERAL ********************************/
+
+/*  Styles de réinitialisation par default
+    http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,
+h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,
+code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,
+sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,
+form,label,legend,table,caption,tbody,tfoot,thead,tr,
+th,td,article,aside,canvas,details,embed,figure,figcaption,
+footer,header,hgroup,menu,nav,output,ruby,section,summary,
+time,mark,audio,video 
+{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* Réinitialisation du rôle d'affichage HTML5 pour les anciens navigateurs*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section 
+{
+  display: block;
+}
+
+body 
+{
+  line-height: 1;
+}
+
+ol,
+ul 
+{
+  list-style: none;
+}
+
+a:link 
+{
+  text-decoration: none;
+}
+
+blockquote,
+q 
+{
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after 
+{
+  content: "";
+  content: none;
+}
+
+table 
+{
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body 
+{
+  font-family: "Roboto", sans-serif;
+}
+
+/*POLICES*/
+@font-face 
+{
+  font-family: "Roboto";
+  src: url("Polices/Roboto/Roboto-Regular-webfont.ttf");
+}
+
+@font-face 
+{
+  font-family: "shrikhand";
+  src: url("Polices/shrikhand/Shrikhand-Regular.ttf");
+}
+
+h1,
+h2,
+h3,
+p,
+a 
+{
+  font-family: "Roboto";
+}
+
+/* BOUTON */
+.button 
+{
+  background-image: linear-gradient(135deg, #FF79DA, #9356DC);
+  border-radius: 20px;
+  height: 40px;
+  border: none;
+  width: 230px;
+  -webkit-box-shadow: 5px 6px 7px #0000002e;
+          box-shadow: 5px 6px 7px #0000002e;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+.button_text 
+{
+  color: white;
+  text-align: center;
+}
+
+.button:hover 
+{
+  cursor: pointer;
+  opacity: 1;
+  -webkit-animation: flash 1.5s;
+          animation: flash 1.5s;
+  -webkit-box-shadow: 5px 15px 21px #00000080;
+          box-shadow: 5px 15px 21px #00000080;
+}
+/*******************************MISE EN PLACE DES ANIMATIONS******************************/
+/*LOADER DE LA PAGE PRINCIPALE*/
+.bloc 
+{
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  -webkit-animation: off;
+          animation: off;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-transition: opacity 2s ease-in-out;
+  transition: opacity 2s ease-in-out;
+  -webkit-animation-delay: 1.75s;
+          animation-delay: 1.75s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.bloc_loader 
+{
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: solid 17px lightgrey;
+  border-radius: 50%;
+  z-index: 1;
+  width: 167px;
+  height: 167px;
+  margin-top: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  border-top-color: #9356dc;
+  -webkit-animation: rotate linear infinite;
+          animation: rotate linear infinite;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+/* Animation du loader */
+@-webkit-keyframes rotate 
+{
+  from 
+  {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to 
+  {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate 
+{
+  from 
+  {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to 
+  {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+/* Animation du bloc */
+@-webkit-keyframes off 
+{
+  from 
+  {
+    opacity: 90%;
+  }
+  to 
+  {
+    display: none;
+    opacity: 0%;
+    z-index: -1;
+  }
