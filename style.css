@@ -247,7 +247,7 @@ a
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #99E2D0;
+  background-color: #e9efed;
 }
 
 .subheader_iconemap 
@@ -268,7 +268,7 @@ a
 /* HERO DE LA PAGE PRINCIPALE */
 .hero 
 {
-  background: #99e2d029;
+  background: #d5dedb29;
   margin-top: 0px;
   margin: -16px 0 0 0;
   padding-bottom: 40px;
@@ -299,7 +299,7 @@ a
 .box_menu_title 
 {
   margin: 24px 0px 8px 18px;
-  border-bottom: 3px solid #99e2d0;
+  border-bottom: 3px solid #99E2D0;
   padding-bottom: 6px;
   width: 11%;
 }
@@ -465,7 +465,7 @@ a
 
 .section-restaurants 
 {
-  background-color: #99e2d029;
+  background-color: #d5dedb29;
   padding-bottom: 45px;
 }
 
