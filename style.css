@@ -91,7 +91,7 @@ body
 @font-face {
   font-family: 'Shrikhand';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 800;
   src: url('../fonts/shrikhand-v11-latin-regular.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('../fonts/shrikhand-v11-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -464,6 +464,11 @@ a
       -ms-flex-align: center;
           align-items: center;
   margin-left: 20px;
+}
+
+.section-fonctionnement .step_icon i:hover
+{
+  color: #9356DC;
 }
 
 .section-fonctionnement .step_content 
