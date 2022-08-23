@@ -584,6 +584,14 @@ a
   }
 }
 
+.section-fonctionnement .step-display
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
 @media (min-width: 450px) and (max-width: 1601px) 
 {
   .section_title 
@@ -599,6 +607,12 @@ a
 
 @media (min-width: 768px) and (max-width: 1024px) 
 {
+  .section-fonctionnement .step-display
+  {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: inherit;
+  }
   .section-restaurants .transform 
   {
     display: -webkit-box;
