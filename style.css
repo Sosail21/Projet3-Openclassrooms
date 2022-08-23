@@ -92,7 +92,7 @@ body
   font-family: 'Shrikhand';
   font-style: normal;
   font-weight: 800;
-  src: url('../fonts/shrikhand-v11-latin-regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/shrikhand-v11-latin-regular.ttf'); /* IE9 Compat Modes */
   src: local(''),
        url('../fonts/shrikhand-v11-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url('../fonts/shrikhand-v11-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
@@ -810,11 +810,7 @@ a
 
 .main-1_content_title 
 {
-  font-family: 'Shrikhand';
-  font-style: italic;
-  font-weight: 800;
-  font-size: 30px;
-  padding: 0px 140px 0px 0px;
+  font-size: 25px;
   width: 100%;
 }
 
