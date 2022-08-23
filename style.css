@@ -449,6 +449,12 @@ a
   left: -8px;
 }
 
+.section-fonctionnement .step_number .number-one
+{
+  display: flex;
+  justify-content: center;
+  margin-top: 1px;
+}
 .section-fonctionnement .step_icon 
 {
   color: GREY;
