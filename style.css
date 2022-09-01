@@ -22,6 +22,12 @@ time,mark,audio,video
   vertical-align: baseline;
 }
 
+/* Structure des FAS */
+.fa .fas
+{
+  line-height: 2;
+}
+
 /* Réinitialisation du rôle d'affichage HTML5 pour les anciens navigateurs*/
 article,
 aside,
@@ -38,11 +44,6 @@ section
   display: block;
 }
 
-body 
-{
-  line-height: 1;
-}
-
 ol,
 ul 
 {
@@ -52,7 +53,9 @@ ul
 a:link 
 {
   text-decoration: none;
+  color: black;
 }
+
 
 blockquote,
 q 
@@ -101,13 +104,13 @@ body
        url('../fonts/shrikhand-v11-latin-regular.svg#Shrikhand') format('svg'); /* Legacy iOS */
 }
 
-
 h1,
 h2,
 h3
 {
   font-family: "Shrikhand";
 }
+
 p
 a 
 {
@@ -144,21 +147,6 @@ a
           animation: flash 1.5s;
   -webkit-box-shadow: 5px 15px 21px #00000080;
           box-shadow: 5px 15px 21px #00000080;
-}
-
-/* Animation du coeur*/
-.fa-heart-animated 
-{
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  bottom: 0;
-  font-size: 0px;
-  color: #9356DC;
-  font-weight: bold;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
 }
 
 /*******************************MISE EN PLACE DES ANIMATIONS******************************/
@@ -233,6 +221,21 @@ a
     opacity: 0%;
     z-index: -1;
   }
+}
+
+/* Animation du coeur*/
+.fa-heart-animated 
+{
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0;
+  font-size: 0px;
+  color: #9356DC;
+  font-weight: bold;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
 /* Couleurs */
@@ -324,7 +327,7 @@ a
           animation-delay: 1s;
 }
 
- /* HEADER PAGE PRINCIPALE */
+/* HEADER PAGE PRINCIPALE */
 .header 
 {
   padding: 15px 0 8px 0px;
@@ -359,16 +362,12 @@ a
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #e9efed;
+  padding: 10px;
 }
 
 .subheader_iconemap 
 {
-  margin: 10px 10px 10px 0px;
-}
-
-.subheader_content 
-{
-  margin: 10px 10px 5px 0px;
+  margin-right: 10px;
 }
 
 .subheader_content a 
@@ -417,9 +416,20 @@ a
 
 .section-fonctionnement 
 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5%;
   background-color: white;
-  padding-bottom: 18px;
 }
+
+.section-fonctionnement .step-display
+  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
 
 .section-fonctionnement .step 
 {
@@ -432,7 +442,7 @@ a
   -webkit-box-shadow: 0 5px 16px #0000002e;
           box-shadow: 0 5px 16px #0000002e;
   width: 300px;
-  margin: 5% 10%;
+  margin: 5%;
   border-radius: 16px;
   height: 62px;
   position: relative;
@@ -455,6 +465,7 @@ a
   justify-content: center;
   margin-top: 1px;
 }
+
 .section-fonctionnement .step_icon 
 {
   color: GREY;
@@ -504,13 +515,12 @@ a
 .section-restaurants 
 {
   background-color: #d5dedb29;
-  padding-bottom: 45px;
+  padding: 5%;
 }
 
 .section-restaurants .resto 
 {
   border-radius: 15px;
-  width: 88%;
   height: 205px;
   -webkit-box-shadow: 0 5px 16px #0000002e;
           box-shadow: 0 5px 16px #0000002e;
@@ -518,8 +528,7 @@ a
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 12px;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .section-restaurants .resto_img img 
@@ -537,7 +546,7 @@ a
   display: grid;
   padding: 5px 181px 0px 0px;
   color: black;
-  padding: 10px 0px 0px 13px;
+  padding: 10px;
 }
 
 .section-restaurants .resto_title 
@@ -584,35 +593,16 @@ a
   }
 }
 
-.section-fonctionnement .step-display
-  {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-
 @media (min-width: 450px) and (max-width: 1601px) 
 {
   .section_title 
   {
     padding: 28px 0px 7px 0px;
-    text-align: center;
-  }
-  .section .step 
-  {
-    margin: 20px auto 20px auto;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) 
 {
-  .section-fonctionnement .step-display
-  {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: inherit;
-  }
   .section-restaurants .transform 
   {
     display: -webkit-box;
@@ -621,6 +611,7 @@ a
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+
   .section-restaurants .resto 
   {
     width: 45%;
@@ -642,21 +633,29 @@ a
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: calc(33.3% - 10px);
-    margin: 15px;
+    margin: 5px;
   }
 }
 
 @media (min-width: 1601px) 
 {
+  .section-fonctionnement
+  {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+  }
   .section_title 
   {
     padding: 28px 0px 7px 0px;
     text-align: center;
   }
+
   .section .step 
   {
     margin: 20px auto 20px auto;
   }
+
   .section-restaurants 
   {
     margin-left: auto;
@@ -676,7 +675,7 @@ a
   {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    width: calc(33.3% - 10px);
+    width: 24%;
     margin: 15px;
   }
 }
@@ -686,7 +685,6 @@ a
 {
     background-color: #2c423d;
     padding: 18px 0px 18px 24px;
-    margin-top: -30px;
 }
   
 .footer a 
