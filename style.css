@@ -142,7 +142,7 @@ a
 .button:hover 
 {
   cursor: pointer;
-  opacity: 1;
+  opacity: 0.8;
   -webkit-animation: flash 1.5s;
           animation: flash 1.5s;
   -webkit-box-shadow: 5px 15px 21px #00000080;
@@ -194,7 +194,7 @@ a
 }
 
 /* Animation du loader*/
-@-webkit-keyframes rotate 
+@keyframes rotate 
 {
   from 
   {
@@ -221,110 +221,6 @@ a
     opacity: 0%;
     z-index: -1;
   }
-}
-
-/* Animation du coeur*/
-.fa-heart-animated 
-{
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  bottom: 0;
-  font-size: 0px;
-  color: #9356DC;
-  font-weight: bold;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-}
-
-/* Couleurs */
-/*Animation du défilement du menu pages de détails*/
-@-webkit-keyframes appear 
-{
-  0% 
-  {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  100% 
-  {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-@keyframes appear 
-{
-  0% 
-  {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  100% 
-  {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-.anim-1 
-{
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
-}
-
-.anim-2 
-{
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-}
-
-.anim-3 
-{
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
-}
-
-.anim-4 
-{
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-}
-
-.anim-5 
-{
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-}
-
-.anim-6 
-{
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
-}
-
-.anim-7 
-{
-  -webkit-animation-delay: 0.7s;
-          animation-delay: 0.7s;
-}
-
-.anim-8 
-{
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
-}
-
-.anim-9 
-{
-  -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
-}
-
-.anim-10 
-{
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
 }
 
 /* HEADER PAGE PRINCIPALE */
@@ -577,6 +473,21 @@ a
   right: 28px;
   bottom: 30px;
   font-size: 25px;
+}
+
+/* Animation du coeur*/
+.fa-heart-animated 
+{
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0;
+  font-size: 0px;
+  color: #9356DC;
+  font-weight: bold;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
 .section-restaurants .resto_heart:hover .fa-heart-animated 
@@ -877,6 +788,9 @@ a
   width: 11%;
 }
 
+/* Couleurs */
+/*Animation du défilement du menu pages de détails*/
+
 .box_element 
 {
   border-radius: 10px;
@@ -893,6 +807,93 @@ a
   animation-name: appear;
   transform: scale(0);
   animation-fill-mode: both;
+}
+
+@-webkit-keyframes appear 
+{
+  0% 
+  {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% 
+  {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes appear 
+{
+  0% 
+  {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% 
+  {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.anim-1 
+{
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.anim-2 
+{
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.anim-3 
+{
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.anim-4 
+{
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.anim-5 
+{
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.anim-6 
+{
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.anim-7 
+{
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+.anim-8 
+{
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.anim-9 
+{
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+.anim-10 
+{
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .box_contents 
