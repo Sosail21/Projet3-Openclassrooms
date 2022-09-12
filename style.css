@@ -25,7 +25,7 @@ time,mark,audio,video
 /* Structure des FAS */
 .fa .fas
 {
-  line-height: 2;
+  line-height: 1;
 }
 
 /* Réinitialisation du rôle d'affichage HTML5 pour les anciens navigateurs*/
@@ -475,24 +475,29 @@ a
   font-size: 25px;
 }
 
+i.far.fa-heart 
+{
+  position: relative;
+  color: black 1px;
+
+}
 /* Animation du coeur*/
 .fa-heart-animated 
 {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  bottom: 0;
-  font-size: 0px;
-  color: #9356DC;
-  font-weight: bold;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  transition: all 0.3s linear 0s;
+  transition: height 2s;
+  background: linear-gradient(0deg, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    width: 100%;
+    height: 0;
+    position: absolute;
+    left: 0;
 }
 
 .section-restaurants .resto_heart:hover .fa-heart-animated 
 {
-  font-size: 25px;
+  height: 100%;
 }
 
 /* Responsive */
@@ -914,19 +919,20 @@ a
   align-items: center;
   overflow: hidden;
   transition: all 0.3s ease;
+  transition: width 1s;
 }
 
 .box_contents:hover .box_check 
 {
-  width: 40px;
+  width: 50px;
   border-radius: 0px 10px 10px 0px;
 }
 
-.box_contents:hover .box_contents_left 
+/*.box_contents:hover .box_contents_left 
 {
   width: calc(100% - 40px);
 }
-
+*/
 .box_contents_title 
 {
   font-weight: 800;
