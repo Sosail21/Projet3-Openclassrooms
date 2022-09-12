@@ -594,7 +594,7 @@ a
 /* FOOTER */
 .footer 
 {
-    background-color: #2c423d;
+    background-color: black;
     padding: 18px 0px 18px 24px;
 }
   
@@ -901,6 +901,21 @@ a
   display: flex;
 }
 
+.box_check 
+{
+  height: 100%;
+  right: 0px;
+  top: 0;
+  width: 0px;
+  color: white;
+  background: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
 .box_contents:hover .box_check 
 {
   width: 40px;
@@ -943,21 +958,6 @@ a
 {
   position: absolute;
   right: 5%;
-}
-
-.box_check 
-{
-  height: 100%;
-  right: 0px;
-  top: 0;
-  width: 0px;
-  color: white;
-  background: #99E2D0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  transition: all 0.3s ease;
 }
 
 /*page de détail*/
